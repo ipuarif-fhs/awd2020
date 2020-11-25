@@ -14,36 +14,82 @@
 			box-sizing: border-box;
 		}
 		body {
-			background: white;
+			background: lightskyblue;
 		}
 		header {
 			padding: 1vh;
 			text-align: center;
+            background:lightsalmon;
 		}
 		nav {
-			background-color: black;
+			background-color: paleturquoise ;
 			color: white;
+            min-height: 17vh;
 		}
 		footer {
-			background-color: black;
-			color: white;
+			background-color: lightgrey;
+			color: black ;
 			padding: 2vh;
-			min-height: 10vh;
+			min-height: 20vh;
 		}
 		.container {
-			background-color: beige;
+			background-color: lightgoldenrodyellow;
 			padding: 1vh;
 			min-height: 60vh;
 			width: 80%;
 			margin: auto;
+            font-size: large;
+            font-style: italic;
 		}
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }    
+    .flex-item {
+        flex-basis: 20%;
+        margin:2vh;
+    }
+    .flex-item a {
+        text-decoration: none;
+        color:lightblue;
 
-		@media only screen and (max-width:800px) {
+    }
+    .flex-item h3 {
+        padding: 2vh;
+        background: lightseagreen;
+    }
+    .flex-item .media {
+        width: 100%;
+        background: lightseagreen;
+        padding: 1vh;
+    }
+    .flex-item .img {
+        display: block;
+        width: 100px;
+        height: 100opx;
+    }
+    .flex-item p {
+        font-size: large;
+        line-height:2rem;
+        background: white;
+        padding:2vh;
+    }
+    @media only screen and (max-width:800px) {
 			.container {
 				width: 100%;
 				margin: auto;
 			}
 		}
+            .flex-container {
+                flex-wrap: wrap;
+            }
+            .flex-item {
+                flex-basis: 100%;
+                margin:2vh;
+             }
+            
 
 
 
@@ -52,18 +98,87 @@
 	<!-- Put the Link Tags Here -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<title>My Page Title</title>
+	<title>Arif's Home page</title>
 
 </head>
 <body>
 	<header>
-		header
+		&nbsp;
 	</header>
 	<nav>
-		Placeholder
+		&nbsp;
 	</nav>
 	<div class="container">
-		<!-- Put assignment specific code here -->
+        <!-- Put assignment specific code here -->
+
+        <h3>JavaScript 30</h3>
+        <div class="flex-container">
+
+            <div class="flex item">
+                <a href="JavaScript/drumkit.html" target="_blank ">
+                <h3>JS Drum Kit</h3>
+                <div class="media">
+                    <img src="images/drumkit.png" alt="drumset" style="height: 200px; width: 200px;" >
+                   
+                </div>
+                <p>
+                    From Web Bos's JS 30 course<br>
+                </p>
+
+            </a>
+            </div>
+    
+            <div class="flex item">
+                <a href="JavaScript/jsclock.html" target="_blank ">
+                <h3>JS Clock</h3>
+                <div class="media">
+                    <img src="images/clock.png" alt="clock" style="height: 200px; width: 200px;">
+                    
+                </div>
+                <p>
+                    From Web Bos's JS 30 course
+                </p>
+            </a>
+            </div>
+
+            <div class="flex item">
+                <a href="JavaScript/cssvariables.html" target="_blank ">
+                <h3>JS Variables</h3>
+                <div class="media">
+                    <img src="images/cssvariables.jpg" alt="cssvariables" style="height: 200px; width: 200px;">
+                    
+                </div>
+                <p>
+                    From Web Bos's JS 30 course
+                </p>
+            </a>
+            </div>
+
+            <div class="flex item">
+                <a href="#" target="_blank ">
+                <h3>Array CArdio</h3>
+                <div class="media">
+                    <img src="images/cardio.jpg" alt="arraycardio" style="height: 200px; width: 200px;">
+                    
+                </div>
+                <p>
+                    From Web Bos's JS 30 course
+                </p>
+            </a>
+            </div>
+
+            <div class="flex item">
+                <a href="JavaScript/fleximagegallery.html" target="_blank ">
+                <h3>Flex Panel</h3>
+                <div class="media">
+                    <img src="images/fleximagegallery.jpg" alt="fleximagegallery" style="height: 200px; width: 200px;">
+                    
+                </div>
+                <p>
+                    From Web Bos's JS 30 course
+                </p>
+            </a>
+            </div>
 		
 		
 		
