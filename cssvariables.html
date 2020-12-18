@@ -1,276 +1,76 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<!-- CSS Will go under Here in STYLE Tags -->
-	<style>
-        
-		:root {
-			/* Put Variables Here */
-
-		}
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-		body {
-            background: lightskyblue;
-            font-style: normal;
-		}
-		header {
-			padding: 1vh;
-			text-align: center;
-            background:lightseagreen;
-		}
-		nav {
-			background-color: paleturquoise ;
-			color: white;
-            min-height: 17vh;
-        }
-		footer {
-			background-color: lightgrey;
-			color: black ;
-			padding: 2vh;
-			min-height: 20vh;
-		}
-		.container {
-			background-color: lightcoral;
-			padding: 1vh;
-			min-height: 60vh;
-			width: 80%;
-			margin: auto;
-            font-size: large;
-            font-style: italic;
-		}
-    .flex-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }    
-    .flex-item {
-        flex-basis: 20%;
-        margin:2vh;
-    }
-    .flex-item a {
-        text-decoration: none;
-        color:lightblue;
-
-    }
-    .flex-item h3 {
-        padding: 2vh;
-        background: lightseagreen;
-    }
-    .flex-item .media {
-        width: 100%;
-        background: lightseagreen;
-        padding: 1vh;
-    }
-    .flex-item .img {
-        display: block;
-        width: 100px;
-        height: 100opx;
-    }
-    .flex-item p {
-        font-size: large;
-        line-height:2rem;
-        background: white;
-        padding:2vh;
-    }
-    @media only screen and (max-width:800px) {
-			.container {
-				width: 100%;
-				margin: auto;
-			}
-		}
-            .flex-container {
-                flex-wrap: wrap;
-            }
-            .flex-item {
-                flex-basis: 100%;
-                margin:2vh;
-             }
-            
-
-
-
-
-	</style>
-	<!-- Put the Link Tags Here -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<title>Arif's Home page</title>
-
+  <meta charset="UTF-8">
+  <title>Scoped CSS Variables and JS</title>
 </head>
 <body>
-	<header>
-		&nbsp;
-	</header>
-	<nav>
-		&nbsp;
-	</nav>
-	<div class="container">
-        <!-- Put assignment specific code here -->
+  <h2>Update CSS Variables with <span class='hl'>JS</span></h2>
 
-        <h3>JavaScript 30</h3>
-        <div class="flex-container">
+  <div class="controls">
+    <label for="spacing">Spacing:</label>
+    <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
 
-            <div class="flex item">
-                <a href="JavaScript/drumkit.html" target="_blank ">
-                <h3>JS Drum Kit</h3>
-                <div class="media">
-                    <img src="images/drumkit.png" alt="drumset" style="height: 200px; width: 200px;" >
-                   
-                </div>
-                <p>
-                    From Web Bos's JS 30 course<br>
-                </p>
+    <label for="blur">Blur:</label>
+    <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
 
-            </a>
-            </div>
-    
-            <div class="flex item">
-                <a href="JavaScript/jsclock.html" target="_blank ">
-                <h3>JS Clock</h3>
-                <div class="media">
-                    <img src="images/clock.png" alt="clock" style="height: 200px; width: 200px;">
-                    
-                </div>
-                <p>
-                    From Web Bos's JS 30 course
-                </p>
-            </a>
-            </div>
+    <label for="base">Base Color</label>
+    <input id="base" type="color" name="base" value="#ffc600">
+  </div>
 
-            <div class="flex item">
-                <a href="JavaScript/cssvariables.html" target="_blank ">
-                <h3>JS Variables</h3>
-                <div class="media">
-                    <img src="images/cssvariables.jpg" alt="cssvariables" style="height: 200px; width: 200px;">
-                    
-                </div>
-                <p>
-                    From Web Bos's JS 30 course
-                </p>
-            </a>
-            </div>
+  <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
 
-            <div class="flex item">
-                <a href="#" target="_blank ">
-                <h3>Array CArdio</h3>
-                <div class="media">
-                    <img src="images/cardio.jpg" alt="arraycardio" style="height: 200px; width: 200px;">
-                    
-                </div>
-                <p>
-                    From Web Bos's JS 30 course
-                </p>
-            </a>
-            </div>
+  <style>
+    :root {
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 10px;
+    }
 
-            <div class="flex item">
-                <a href="JavaScript/fleximagegallery.html" target="_blank ">
-                <h3>Flex Panel</h3>
-                <div class="media">
-                    <img src="images/fleximagegallery.jpg" alt="fleximagegallery" style="height: 200px; width: 200px;">
-                    
-                </div>
-                <p>
-                    From Web Bos's JS 30 course
-                </p>
-            </a>
-            </div>
+    img {
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
 
-            <div class="flex item">
-                <a href="JavaScript/ajaxtypehead.html" target="_blank ">
-                <h3>Ajax Type Head</h3>
-                <div class="media">
-                    <img src="images/typehead.png" alt="typehead" style="height: 200px; width: 200px;">
-                    
-                </div>
-                <p>
-                    From Web Bos's JS 30 course
-                </p>
-            </a>
-            </div>
+    .hl {
+      color: var(--base);
+    }
 
-            <div class="flex item">
-                <a href="JavaScript/arraycardio2.html" target="_blank ">
-                <h3>Array Cardio2</h3>
-                <div class="media">
-                    <img src="images/arraycardio2.jpg" alt="arraycardio2" style="height: 200px; width: 200px;">
-                    
-                </div>
-                <p>
-                    From Web Bos's JS 30 course
-                </p>
-            </a>
-            </div>
+    /*
+      misc styles, nothing to do with CSS variables
+    */
 
-            <div class="flex item">
-                <a href="JavaScript/funwithhtmlcanvs.html" target="_blank ">
-                <h3>Fun with Html Canvas</h3>
-                <div class="media">
-                    <img src="images/funwithcanvs.jpg" alt="funwithhtmlcanvs" style="height: 200px; width: 200px;">
-                    
-                </div>
-                <p>
-                    From Web Bos's JS 30 course
-                </p>
-            </a>
-            </div>
+    body {
+      text-align: center;
+      background: #193549;
+      color: white;
+      font-family: 'helvetica neue', sans-serif;
+      font-weight: 100;
+      font-size: 50px;
+    }
 
-            <div class="flex item">
-                <a href="JavaScript/devtooldominatios.html" target="_blank ">
-                <h3>Dev tool dominations</h3>
-                <div class="media">
-                    <img src="images/breakdown.jpg" alt="devtooldominatios" style="height: 200px; width: 200px;">
-                    
-                </div>
-                <p>
-                    From Web Bos's JS 30 course
-                </p>
-            </a>
-            </div>
-            <div class="flex item">
-                <a href="JavaScript/holdshittocheck.html" target="_blank ">
-                <h3>Hold shift and check checkbox</h3>
-                <div class="media">
-                    <img src="images/checkbox.png" alt="holdshittocheck" style="height: 200px; width: 200px;">
-                    
-                </div>
-                <p>
-                    From Web Bos's JS 30 course
-                </p>
-            </a>
-            </div>
-            <div class="flex item">
-                <a href="JavaScript/slideinonscroll.html" target="_blank ">
-                <h3>slide in on scroll</h3>
-                <div class="media">
-                    <img src="images/scroll.jfif" alt="holdshittocheck" style="height: 200px; width: 200px;">
-                    
-                </div>
-                <p>
-                    From Web Bos's JS 30 course
-                </p>
-            </a>
-            </div>
-		
-		
-		
-		
-		
-		
-		
-	</div><!-- End of the container -->
-	<footer>
-		Made in FHS Web Design
-	</footer>
+    .controls {
+      margin-bottom: 50px;
+    }
+
+    input {
+      width: 100px;
+    }
+  </style>
+
+  <script>
+    const inputs = document.querySelectorAll('.controls input');
+
+    function handleUpdate() {
+      const suffix = this.dataset.sizing || '';
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+
+    inputs.forEach(input => input.addEventListener('change', handleUpdate));
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+  </script>
 
 
-
-
-<!-- Don't delete me please, but copy me...-->
 </body>
 </html>
